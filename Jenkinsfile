@@ -11,7 +11,7 @@ pipeline{
 					def outputDir = 'build'
 
 					sh "mkdir -p ${outputDir}"
-                			sh 'javac -d ${outputDir} test/test.java'
+                			sh 'javac -d ${outputDir} ./test/test.java'
 				}
             		}
         	}
