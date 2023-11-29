@@ -10,8 +10,8 @@ pipeline{
 				script {
 					def outputDir = 'build'
 
-					sh "mkdir -p ${outputDir}"
-                			sh 'javac -d ${outputDir} ./test/test.java'
+					sh 'mkdir -p ${outputDir}'
+                			sh 'javac -d ${outputDir} test/test.java'
 				}
             		}
         	}
