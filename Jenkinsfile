@@ -7,7 +7,7 @@ pipeline{
 	stages {
        		stage('Build') {
             		steps {
-                		sh 'javac Simple.java'
+                		sh 'javac Simple.java test/test.java'
             		}
         	}
 		stage ('SonarQube Analysis') {
