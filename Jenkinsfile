@@ -12,7 +12,7 @@ pipeline{
 					def outputDir = 'build'
 
 					sh "mkidr -p ${outputDir}"
-                			sh 'javac -d ${outputDir} ${sourceDir}/Simple.java'
+                			sh 'javac -d ${outputDir} ${sourceDir}/test.java'
 				}
             		}
         	}
