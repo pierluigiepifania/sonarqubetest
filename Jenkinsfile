@@ -8,11 +8,10 @@ pipeline{
        		stage('Build') {
             		steps {
 				script {
-					def sourceDir = 'test'
 					def outputDir = 'build'
 
 					sh "mkdir -p ${outputDir}"
-                			sh 'javac -d ${outputDir} ${sourceDir}/test.java'
+                			sh 'javac -d ${outputDir} test/test.java'
 				}
             		}
         	}
