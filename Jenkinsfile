@@ -7,7 +7,13 @@ pipeline{
 	stages {
        		stage('Build') {
             		steps {
-                		sh 'javac Simple.java test/test.java'
+				script {
+					def sourceDir = 'test'
+					def outputDir = 'build'
+
+					sh "mkidr -p ${outputDir}"
+                			sh 'javac -d ${outputDir} ${sourceDir}/Simple.java'
+				}
             		}
         	}
 		stage ('SonarQube Analysis') {
