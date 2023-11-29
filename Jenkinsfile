@@ -7,7 +7,7 @@ pipeline{
 	stages {
        		stage('Build') {
             		steps {
-                		sh 'javac BubbleSort.java'
+                		sh 'javac Simple.java'
             		}
         	}
 		stage ('SonarQube Analysis') {
