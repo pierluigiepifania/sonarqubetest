@@ -5,11 +5,11 @@ pipeline{
 		scannerHome = tool 'sqrscanner'
 	}
 	stages {
-		stage ('stage 1') {
-			steps {
-				echo 'Hello World'
-			}
-		}
+       		stage('Build') {
+            		steps {
+                		sh 'javac BubbleSort.java'
+            		}
+        	}
 		stage ('SonarQube Analysis') {
 			steps {
 				script {
