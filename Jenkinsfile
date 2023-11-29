@@ -9,7 +9,7 @@ pipeline{
             		steps {
 				script {
 					def outputDir = 'build'
-                			sh 'javac -d build test/test.java'
+                			sh 'javac -d build test/test.java test/prova.java'
 				}
             		}
         	}
